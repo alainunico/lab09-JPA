@@ -106,7 +106,7 @@ public class UserDB {
             statement.setString(3, user.getFirstName());
             statement.setString(4, user.getLastName());
             statement.setString(5, user.getPassword());
-            statement.setInt(6, user.getRole().getId());
+            statement.setInt(6, user.getRole().getRoleId());
             statement.executeUpdate();
         } finally {
             DBUtil.closePreparedStatement(statement);
@@ -126,7 +126,7 @@ public class UserDB {
             statement.setString(2, user.getFirstName());
             statement.setString(3, user.getLastName());
             statement.setString(4, user.getPassword());
-            statement.setInt(5, user.getRole().getId());
+            statement.setInt(5, user.getRole().getRoleId());
             statement.setString(6, user.getEmail());
             statement.executeUpdate();
         } finally {
